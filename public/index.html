@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app.css" />
+    <title>Event chat</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <h1>Event Chat</h1>
+        <ul>
+          <li><a href="/clear-history">Clear chat</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <ol class="chat"></ol>
+        <form method="POST" action="/messages">
+          <fieldset role="group">
+            <input
+              name="query"
+              type="text"
+              id="query"
+              placeholder="Ask something"
+              required
+            />
+            <input type="submit" value="Send" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="container">
+        Built by <a href="https://twitter.com/philnash">philnash</a>
+      </p>
+    </footer>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

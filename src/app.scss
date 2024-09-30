@@ -1,0 +1,55 @@
+@use "./pico.scss";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  display: block;
+  height: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 23, 31, 1) 0%,
+    rgba(19, 23, 31, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+ol.chat {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 17rem);
+  position: relative;
+  overscroll-behavior-y: contain;
+}
+ol.chat > li {
+  list-style-type: none;
+}
+ol.chat > li.user {
+  margin-right: 2rem;
+}
+ol.chat > li.user article {
+  background-color: #3f1e6d;
+}
+
+ol.chat > li.model {
+  margin-left: 2rem;
+}
